@@ -1,11 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X, BookOpen } from "lucide-react";
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [scrolled, setScrolled] = useState(false);
@@ -16,6 +20,13 @@ const Navbar = () => {
 
   const scrollToSection = (sectionId: string) => {
     setIsMenuOpen(false);
+    
+    if (!isHomePage) {
+      // If not on homepage, navigate to homepage with hash
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+    
     const element = document.getElementById(sectionId);
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
