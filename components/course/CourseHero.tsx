@@ -36,10 +36,12 @@ const CourseHero = ({ course }: CourseHeroProps) => {
             transition={{ duration: 0.5 }}
             className="md:w-1/2"
           >
-            <Link href="/#courses" className="inline-flex items-center text-green-600 hover:text-green-700 mb-4">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Courses
-            </Link>
+            <div className="pt-14 md:pt-6">
+              <Link href="/#courses" className="inline-flex items-center text-green-600 hover:text-green-700 mb-6">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to Courses
+              </Link>
+            </div>
             
             <div className="flex items-center gap-2 mb-4">
               <Badge className="bg-green-100 text-green-700 hover:bg-green-200">{course.level}</Badge>
