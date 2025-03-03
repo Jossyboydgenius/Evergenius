@@ -110,12 +110,12 @@ const Footer = () => {
                 Hours: Mon-Fri 9AM-5PM EST
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-green-600">
+                <Link href="/contact" className="text-muted-foreground hover:text-green-600">
                   Contact Form
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-green-600">
+                <Link href="/support" className="text-muted-foreground hover:text-green-600">
                   Support
                 </Link>
               </li>
