@@ -52,7 +52,7 @@ const Benefits = () => {
               This is not just another online course
             </h2>
             <p className="text-muted-foreground md:text-xl">
-              It's a results-driven program where we guide you step by step until you start earning. No Ponzi schemes. No unrealistic promises. Just practical strategies that work.
+            It&apos;s a results-driven program where we guide you step by step until you start earning. No Ponzi schemes. No unrealistic promises. Just practical strategies that work.
             </p>
             <ul className="space-y-3 mt-4">
               {benefits.map((benefit, index) => (
