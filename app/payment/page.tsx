@@ -8,7 +8,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { ArrowLeft, CreditCard, Building, Coins, MessageSquare } from "lucide-react";
+import { ArrowLeft, CreditCard, Building, Coins } from "lucide-react";
+import { BsWhatsapp } from "react-icons/bs";
 import { coursesData } from "@/data/courses";
 
 export default function PaymentPage() {
@@ -49,7 +50,7 @@ export default function PaymentPage() {
 
   if (!course) {
     return (
-      <div className="container mx-auto px-4 py-12 flex items-center justify-center min-h-[60vh]">
+      <div className="container mx-auto px-4 py-12 pt-24 md:pt-32 flex items-center justify-center min-h-[60vh]">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Course not found</h1>
           <p className="mb-6">The course you&apos;re looking for doesn&apos;t exist or has been removed.</p>
@@ -65,7 +66,7 @@ export default function PaymentPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-12 md:py-20">
+    <div className="container mx-auto px-4 py-12 md:py-20 pt-24 md:pt-32">
       <div className="max-w-3xl mx-auto">
         <Link href={`/courses/${courseSlug}`} className="inline-flex items-center text-green-600 hover:text-green-700 mb-6">
           <ArrowLeft className="mr-2 h-4 w-4" />
@@ -98,7 +99,7 @@ export default function PaymentPage() {
                       <span>USDT</span>
                     </TabsTrigger>
                     <TabsTrigger value="whatsapp" className="flex items-center gap-2">
-                      <MessageSquare className="h-4 w-4" />
+                      <BsWhatsapp className="h-5 w-5" />
                       <span>WhatsApp</span>
                     </TabsTrigger>
                   </TabsList>
@@ -159,13 +160,15 @@ export default function PaymentPage() {
                         <h3 className="text-xl font-semibold mb-2">Pay via WhatsApp</h3>
                         <p className="text-muted-foreground">Chat with us directly on WhatsApp to complete your payment.</p>
                       </div>
-                      <Button 
-                        className="bg-green-600 hover:bg-green-700 text-white w-full md:w-auto flex items-center gap-2"
-                        onClick={handleWhatsAppRedirect}
-                      >
-                        <MessageSquare className="h-5 w-5" />
-                        Contact Us on WhatsApp
-                      </Button>
+                      <div className="flex justify-center">
+                        <Button 
+                          className="bg-green-600 hover:bg-green-700 text-white w-full md:w-auto flex items-center gap-2"
+                          onClick={handleWhatsAppRedirect}
+                        >
+                          <BsWhatsapp className="h-5 w-5" />
+                          Contact Us on WhatsApp
+                        </Button>
+                      </div>
                     </div>
                   </TabsContent>
                 </Tabs>
@@ -174,7 +177,7 @@ export default function PaymentPage() {
                   <h3 className="text-lg font-semibold mb-4">Need Help?</h3>
                   <Link href="https://api.whatsapp.com/send?phone=2348094703225" target="_blank">
                     <Button variant="outline" className="w-full flex items-center justify-center gap-2">
-                      <MessageSquare className="h-4 w-4" />
+                      <BsWhatsapp className="h-5 w-5" />
                       Contact Us on WhatsApp
                     </Button>
                   </Link>
