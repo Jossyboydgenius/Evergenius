@@ -104,9 +104,11 @@ const Navbar = () => {
         </nav>
     
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">
-            Log In
-          </Button>
+          <Link href="/login">
+            <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">
+              Log In
+            </Button>
+          </Link>
           <Button 
             className="bg-green-600 hover:bg-green-700 text-white"
             onClick={() => scrollToSection("courses")}
@@ -152,9 +154,11 @@ const Navbar = () => {
               FAQ
             </button>
             <div className="flex flex-col gap-2 pt-2">
-              <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50 w-full">
-                Log In
-              </Button>
+              <Link href="/login" className="w-full">
+                <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50 w-full">
+                  Log In
+                </Button>
+              </Link>
               <Button 
                 className="bg-green-600 hover:bg-green-700 text-white w-full"
                 onClick={() => scrollToSection("courses")}
