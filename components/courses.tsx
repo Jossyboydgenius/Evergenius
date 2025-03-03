@@ -132,7 +132,7 @@ const Courses = () => {
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
-                    <Link href={`/courses/${course.slug}`} className="w-full sm:w-auto">
+                    <Link href={`/payment?course=${course.slug}`} className="w-full sm:w-auto">
                       <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                         Buy Now
                       </Button>
