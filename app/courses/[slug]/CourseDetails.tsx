@@ -77,13 +77,15 @@ const CourseDetails = ({ initialCourse, slug }: CourseDetailsProps) => {
             transition={{ duration: 0.5 }}
           >
             <Tabs defaultValue="overview" className="w-full">
-              <TabsList className="grid w-full grid-cols-5 mb-8">
-                <TabsTrigger value="overview">Overview</TabsTrigger>
-                <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
-                <TabsTrigger value="instructor">Instructor</TabsTrigger>
-                <TabsTrigger value="reviews">Reviews</TabsTrigger>
-                <TabsTrigger value="faq">FAQ</TabsTrigger>
-              </TabsList>
+              <div className="overflow-x-auto pb-2">
+                <TabsList className="flex w-full min-w-max mb-8">
+                  <TabsTrigger value="overview" className="flex-1">Overview</TabsTrigger>
+                  <TabsTrigger value="curriculum" className="flex-1">Curriculum</TabsTrigger>
+                  <TabsTrigger value="instructor" className="flex-1">Instructor</TabsTrigger>
+                  <TabsTrigger value="reviews" className="flex-1">Reviews</TabsTrigger>
+                  <TabsTrigger value="faq" className="flex-1">FAQ</TabsTrigger>
+                </TabsList>
+              </div>
               
               <TabsContent value="overview">
                 <CourseOverview course={course} />
