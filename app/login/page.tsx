@@ -28,15 +28,15 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-green-50 to-white p-4 pb-16">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-green-50 to-white p-4 pt-24 pb-16">
       <div className="w-full max-w-md space-y-8">
         <div className="text-center">
           <Link href="/" className="inline-flex items-center gap-2 mb-8">
             <BookOpen className="h-8 w-8 text-green-600" />
             <span className="text-2xl font-bold">EverGenius</span>
           </Link>
-          <h1 className="text-2xl font-bold tracking-tight">Welcome back</h1>
-          <p className="text-muted-foreground mt-2">Enter your credentials to access your account</p>
+          <h1 className="text-2xl font-bold tracking-tight">Create an account</h1>
+          <p className="text-muted-foreground mt-2">Enter your information to get started</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
