@@ -128,14 +128,11 @@ const Footer = () => {
               © 2025 EverGenius Crypto Club. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="text-sm text-muted-foreground hover:text-green-600">
+              <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-green-600">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-green-600">
+              <Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-green-600">
                 Terms of Service
-              </Link>
-              <Link href="#" className="text-sm text-muted-foreground hover:text-green-600">
-                Cookie Policy
               </Link>
             </div>
           </div>
