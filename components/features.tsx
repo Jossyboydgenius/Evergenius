@@ -71,7 +71,7 @@ const Features = () => {
         >
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
-              What You'll Learn
+              What You&apos;ll Learn
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Comprehensive Crypto Education
