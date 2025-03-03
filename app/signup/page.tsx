@@ -48,6 +48,7 @@ export default function SignupPage() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
+              className="border-green-200 focus:border-green-600 focus-visible:ring-green-600"
             />
           </div>
           <div className="space-y-2">
@@ -59,6 +60,7 @@ export default function SignupPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              className="border-green-200 focus:border-green-600 focus-visible:ring-green-600"
             />
           </div>
           <div className="space-y-2">
@@ -70,6 +72,7 @@ export default function SignupPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              className="border-green-200 focus:border-green-600 focus-visible:ring-green-600"
             />
           </div>
           <Button type="submit" className="w-full bg-green-600 hover:bg-green-700" disabled={isLoading}>
