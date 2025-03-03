@@ -65,7 +65,7 @@ const CourseDetails = ({ initialCourse, slug }: CourseDetailsProps) => {
   return (
     <div className="bg-background">
       {/* Hero Section */}
-      <CourseHero course={course} />
+      <CourseHero course={course} slug={slug} />
       
       {/* Course Content */}
       <section className="py-12 md:py-20">
@@ -117,10 +117,12 @@ const CourseDetails = ({ initialCourse, slug }: CourseDetailsProps) => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Want This Kind of Change in Your Life Too?</h2>
             <p className="text-lg text-muted-foreground mb-8">Join thousands of successful students who have transformed their crypto journey with our expert-led courses.</p>
-            <Button className="bg-green-600 hover:bg-green-700 text-white text-lg py-6 px-8">
-              BUY COURSE NOW
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href={`/payment?course=${slug}`}>
+              <Button className="bg-green-600 hover:bg-green-700 text-white text-lg py-6 px-8">
+                BUY COURSE NOW
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
             <p className="mt-4 text-sm text-muted-foreground">30-Day Money-Back Guarantee</p>
           </div>
         </div>
