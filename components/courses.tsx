@@ -125,12 +125,19 @@ const Courses = () => {
                     <p className="font-bold text-lg">{course.price}</p>
                     <p className="text-xs text-muted-foreground">{course.duration}</p>
                   </div>
-                  <Link href={`/courses/${course.slug}`}>
-                    <Button variant="outline" className="text-green-600 border-green-600 hover:bg-green-50">
-                      Read More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
+                  <div className="flex flex-col sm:flex-row gap-2 mt-6">
+                    <Link href={`/courses/${course.slug}`} className="w-full sm:w-auto">
+                      <Button variant="outline" className="w-full">
+                        Read More
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                    <Link href={`/courses/${course.slug}`} className="w-full sm:w-auto">
+                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                        Buy Now
+                      </Button>
+                    </Link>
+                  </div>
                 </CardFooter>
               </Card>
             </motion.div>
