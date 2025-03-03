@@ -12,9 +12,10 @@ import { Course } from "@/types/course";
 
 interface CourseHeroProps {
   course: Course;
+  slug?: string;
 }
 
-const CourseHero = ({ course }: CourseHeroProps) => {
+const CourseHero = ({ course, slug }: CourseHeroProps) => {
   const [headerRef, headerInView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -101,9 +102,11 @@ const CourseHero = ({ course }: CourseHeroProps) => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-green-600 hover:bg-green-700 text-white text-lg py-6">
-                Buy This Course
-              </Button>
+              <Link href={`/payment?course=${slug}`}>
+                <Button className="bg-green-600 hover:bg-green-700 text-white text-lg py-6">
+                  Buy This Course
+                </Button>
+              </Link>
               <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50 text-lg py-6">
                 <PlayCircle className="mr-2 h-5 w-5" />
                 Watch Preview
