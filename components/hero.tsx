@@ -17,14 +17,14 @@ const Hero = () => {
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
-        top: offsetTop - 80, // Offset for navbar height
+        top: offsetTop - 100, // Increased offset for taller navbar
         behavior: "smooth"
       });
     }
   };
 
   return (
-    <section id="hero" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-green-50 to-white relative overflow-hidden">
+    <section id="hero" className="w-full pt-24 md:pt-28 pb-12 md:py-24 lg:py-32 bg-gradient-to-b from-green-50 to-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-20 left-10 w-64 h-64 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
@@ -40,14 +40,16 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="flex flex-col justify-center space-y-4"
           >
-            <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
-              🚀 Welcome to EverGenius Crypto Club 🔥
+            <div className="flex justify-center lg:justify-start w-full">
+              <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700 w-fit">
+                🚀 Welcome to EverGenius Crypto Club 🔥
+              </div>
             </div>
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Empowering You to Navigate and Profit from the Crypto Market with Confidence
             </h1>
             <p className="text-muted-foreground md:text-xl">
-              At EverGenius Crypto Club, we provide a structured, hands-on approach to help you start generating consistent income in the crypto space within just 2 weeks—without fear, confusion, or unnecessary risks.
+              At EverGenius Crypto Club, we provide a structured, hands-on approach to help you start generating consistent income in the crypto space within just 2 weeks without fear, confusion, or unnecessary risks.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button 
