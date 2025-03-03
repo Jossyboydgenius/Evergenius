@@ -57,8 +57,10 @@ const Navbar = () => {
     <header className={`fixed top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-200 ${scrolled ? 'shadow-sm' : ''}`}>
       <div className="container mx-auto flex h-20 items-center justify-between">
         <div className="flex items-center gap-2">
-          <BookOpen className="h-6 w-6 text-green-600" />
-          <span className="text-xl font-bold">EverGenius</span>
+          <Link href="/" className="flex items-center gap-2">
+            <BookOpen className="h-6 w-6 text-green-600" />
+            <span className="text-xl font-bold">EverGenius</span>
+          </Link>
         </div>
     
         {/* Desktop Navigation */}
