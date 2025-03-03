@@ -1,7 +1,24 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { BookOpen, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 const Footer = () => {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+  
+  // Function to handle navigation based on current page
+  const getNavigationLink = (sectionId: string) => {
+    if (isHomePage) {
+      // If already on homepage, just scroll to section
+      return `#${sectionId}`;
+    } else {
+      // If on another page, go to homepage then to section
+      return `/#${sectionId}`;
+    }
+  };
+
   return (
     <footer className="w-full border-t bg-background">
       <div className="container px-4 md:px-6 py-12">
@@ -42,17 +59,17 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#features" className="text-muted-foreground hover:text-green-600">
+                <Link href={getNavigationLink("features")} className="text-muted-foreground hover:text-green-600">
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="#pricing" className="text-muted-foreground hover:text-green-600">
+                <Link href={getNavigationLink("pricing")} className="text-muted-foreground hover:text-green-600">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="#faq" className="text-muted-foreground hover:text-green-600">
+                <Link href={getNavigationLink("faq")} className="text-muted-foreground hover:text-green-600">
                   FAQ
                 </Link>
               </li>
