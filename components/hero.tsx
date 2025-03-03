@@ -59,7 +59,11 @@ const Hero = () => {
                 Get a Course
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">
+              <Button 
+                variant="outline" 
+                className="border-green-600 text-green-600 hover:bg-green-50"
+                onClick={() => scrollToSection("features")}
+              >
                 Learn More
               </Button>
             </div>
